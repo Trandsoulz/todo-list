@@ -2,6 +2,7 @@
 
 :root {
     --primary: #255FD5;
+    --secondary: #84a7f0;
     --white: #ffffff;
   }
 
@@ -12,6 +13,8 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+
+
 header{
     padding: 1rem;
     text-align: center;
@@ -20,10 +23,75 @@ header{
     font-size: 1.3rem;
 }
 
-ion-icon{
+.inmiddle{
+    
+   
+}
+
+.middle{
+    margin: 0 auto;
+    width: 100%;
+}
+
+.input-fieldd{
+    position: absolute;
+    animation: input-field 1s forwards;
+    border: 3px solid var(--primary);
+    border-radius: 10px;
+    margin: 1rem;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes input-field {
+    0%{
+        bottom: -50%;
+    }
+
+    100%{
+        top: -200px;
+    }
+}
+
+.addlist{
+    animation: inputtt 1s forwards;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes inputtt {
+    0%{
+        bottom: -50%;
+    }
+
+    100%{
+        bottom: 40%;
+    }
+}
+
+
+
+.input-field{
+    display: flex;
+    justify-content: space-between;
+}
+
+#icon1{
+    padding-left: 1.5rem;
+    font-size: 1.4rem;
+    color: var(--primary);
+    position: relative;
+    top: .6rem;
+}
+
+#icon2{
     position: absolute;
     bottom: 0px;
-    left: 50%;
+    left: 45%;
     color: var(--white);
     font-size: 3rem;
     background-color: var(--primary);
@@ -31,13 +99,62 @@ ion-icon{
     cursor: pointer;
 }
 
+.icon3{
+    position: absolute;
+    bottom: 0px;
+    left: 45%;
+    color: var(--white);
+    font-size: 3rem;
+    background-color: var(--primary);
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+}
+.none{
+    display: none;
+}
 
-ion-icon:checked{
-    color: yellow;
+.block{
+    display: block;
+}
+
+
+.removelist{
+    animation: removeinputtt 1s forwards;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes removeinputtt {
+    0%{
+        position: absolute;
+        bottom: 40%;
+    }
+
+    100%{
+        position: absolute;
+        bottom: 100%;
+    }
 }
 
 
 
-.input-fieold{
-    border: 1px solid var(--primary);
+
+/* .input-field{
+    padding-top: 1.5rem;
+} */
+
+input{
+    padding: .5rem;
+    border-radius: 10px;
+    border: 2px solid var(--primary);
+    outline: none;
+    font-size: 1rem;
+}
+
+input:focus{
+    border-radius: 10px;
+    border: 2px solid var(--secondary);
+    padding: .6rem;
 }
