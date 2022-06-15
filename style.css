@@ -21,9 +21,9 @@ header{
 }
 
 ion-icon{
-    position: relative;
-    bottom: 15px;
-    left: 45%;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
     color: var(--white);
     font-size: 3rem;
     background-color: var(--primary);
