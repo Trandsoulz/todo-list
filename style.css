@@ -21,7 +21,7 @@ header{
 }
 
 ion-icon{
-    position: fixed;
+    position: relative;
     bottom: 15px;
     left: 45%;
     color: var(--white);
