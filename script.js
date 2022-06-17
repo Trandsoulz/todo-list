@@ -13,6 +13,7 @@ const add = document.querySelector('#icon2');
 const remove = document.querySelector('.icon3');
 const form = document.querySelector('.middle');
 const send = document.querySelector('#icon1');
+const errorMessage = document.querySelector('.error-message')
 
 
 // Bring up input field for text
@@ -39,6 +40,12 @@ remove.addEventListener('click', () => {
 // getting data from input field, and appending it to HTML page 
 
 const inputValidationForm = () => {
+   
+
+
+if (input.value === '') {
+    errorMessage.innerHTML = 'Put in something'
+} else {
     setTimeout(() => {
         form.classList.remove('addlist');
         form.classList.toggle('removelist');
@@ -50,18 +57,14 @@ const inputValidationForm = () => {
 
     event.preventDefault();
 
-
-if (input === '') {
-    console.log('Put in something')
-} else {
     console.log(input.value);
+
+    errorMessage.innerHTML = ''
 }
 
 const inputValue = input.value.map( words => {
     conaole.log(words)
 })
-
-    input.value = '';
 };
 
 // Send data to HTML page 
