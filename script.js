@@ -35,6 +35,8 @@ remove.addEventListener('click', () => {
     remove.classList.toggle('block');
     add.classList.toggle('none');
 
+    errorMessage.innerHTML = ''
+
 });
 
 // getting data from input field, and appending it to HTML page 
@@ -44,7 +46,7 @@ const inputValidationForm = () => {
 
 
 if (input.value === '') {
-    errorMessage.innerHTML = 'Put in something'
+    errorMessage.innerHTML = 'Put in something yoooo 🥶🥶🥶  '
 } else {
     setTimeout(() => {
         form.classList.remove('addlist');
@@ -59,11 +61,11 @@ if (input.value === '') {
 
     console.log(input.value);
 
-    errorMessage.innerHTML = ''
+    errorMessage.innerHTML = '';
 }
 
 const inputValue = input.value.map( words => {
-    conaole.log(words)
+    console.log(words)
 })
 };
 
