@@ -51,7 +51,7 @@ if (input.value === '') {
     setTimeout(() => {
         form.classList.remove('addlist');
         form.classList.toggle('removelist');
-    }, 250);
+    }, 1000);
     setTimeout(() => {
         remove.classList.toggle('block');
     }, 500);
