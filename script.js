@@ -8,22 +8,25 @@ console.log(`Hello World!`);
 // console.log(h11)
 
 
-const input = document.querySelector('#content');
+let input = document.querySelector('#content');
 const add = document.querySelector('#icon2');
 const remove = document.querySelector('.icon3');
 const form = document.querySelector('.middle');
-const body = document.body;
 const send = document.querySelector('#icon1');
 
 
-
+// Bring up input field for text
 
 add.addEventListener('click', () => {
     form.classList.toggle('addlist');
     form.classList.remove('removelist');
     add.classList.toggle('none');
     remove.classList.toggle('block');
+
+    input.value = '';
 });
+
+// Removes input field after texting or if no input was put in it
 
 remove.addEventListener('click', () => {
     form.classList.toggle('removelist');
@@ -33,27 +36,9 @@ remove.addEventListener('click', () => {
 
 });
 
+// getting data from input field, and appending it to HTML page 
 
-
-
-// function getInputFromTextBox() {
-//     var input = document.getElementById("userInput").value;
-//     alert(input);
-// }
-
-
-
-
-
-
-
-if (input === '') {
-    console.log('Put in something')
-} else {
-    console.log(input);
-}
-
-send.addEventListener('click', () => {
+const inputValidationForm = () => {
     setTimeout(() => {
         form.classList.remove('addlist');
         form.classList.toggle('removelist');
@@ -62,26 +47,56 @@ send.addEventListener('click', () => {
         remove.classList.toggle('block');
     }, 500);
     add.classList.toggle('none');
-    input = '';
+
+    event.preventDefault();
+
+
+if (input === '') {
+    console.log('Put in something')
+} else {
+    console.log(input.value);
+}
+
+const inputValue = input.value.map( words => {
+    conaole.log(words)
 })
 
+    input.value = '';
+};
 
+// Send data to HTML page 
 
-
-
-
-
-    const btn = document.getElementById('btn');
-
-btn.addEventListener('click', function handleClick(event) {
-  // 👇️ if you are submitting a form (prevents page reload)
-  event.preventDefault();
-
-  const firstNameInput = document.getElementById('first_name');
-
-  // Send value to server
-  console.log(firstNameInput.value);
-
-  // 👇️ clear input field
-  firstNameInput.value = '';
+send.addEventListener('click', () => {
+   inputValidationForm()
 });
+
+window.addEventListener('keypress', (event) => {
+
+    if (event.keyCode == 13) {
+        inputValidationForm()
+    } else {
+        event.defaultPrevented
+    }
+});
+
+
+
+
+
+
+
+
+//     const btn = document.getElementById('btn');
+
+// btn.addEventListener('click', function handleClick(event) {
+//   // 👇️ if you are submitting a form (prevents page reload)
+//   event.preventDefault();
+
+//   const firstNameInput = document.getElementById('first_name');
+
+//   // Send value to server
+//   console.log(firstNameInput.value);
+
+//   // 👇️ clear input field
+//   firstNameInput.value = '';
+// });

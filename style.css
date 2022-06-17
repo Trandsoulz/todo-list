@@ -73,6 +73,10 @@ header{
     justify-content: space-between;
 }
 
+.error-message{
+    
+}
+
 #icon1{
     padding-left: 1.5rem;
     font-size: 1.4rem;
@@ -80,10 +84,6 @@ header{
     position: relative;
     top: .6rem;
     cursor: pointer;
-}
-
-#icon1:checked{
-    color: var(yellow);
 }
 
 #icon2{
