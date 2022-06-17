@@ -73,7 +73,7 @@ send.addEventListener('click', () => {
    inputValidationForm()
 });
 
-window.addEventListener('keypress', (event) => {
+window.addEventListener('keyup', (event) => {
 
     if (event.keyCode == 13) {
         inputValidationForm()
