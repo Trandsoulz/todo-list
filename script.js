@@ -61,7 +61,7 @@ if (input.value === '') {
 
     console.log(input.value);
 
-    errorMessage.innerHTML = '';
+    errorMessage.innerHTML = `That's more like it 😏😏😏`;
 }
 
 const inputValue = input.value.map( words => {
