@@ -57,13 +57,12 @@ send.addEventListener('click', () => {
     setTimeout(() => {
         form.classList.remove('addlist');
         form.classList.toggle('removelist');
-    }, 500);
+    }, 250);
     setTimeout(() => {
         remove.classList.toggle('block');
     }, 500);
     add.classList.toggle('none');
     input = '';
-    
 })
 
 
@@ -71,7 +70,7 @@ send.addEventListener('click', () => {
 
 
 
-/* 
+
     const btn = document.getElementById('btn');
 
 btn.addEventListener('click', function handleClick(event) {
@@ -86,5 +85,3 @@ btn.addEventListener('click', function handleClick(event) {
   // 👇️ clear input field
   firstNameInput.value = '';
 });
-
-*/

@@ -82,6 +82,10 @@ header{
     cursor: pointer;
 }
 
+#icon1:checked{
+    color: var(yellow);
+}
+
 #icon2{
     position: absolute;
     bottom: 0px;
