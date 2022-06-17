@@ -8,10 +8,15 @@ console.log(`Hello World!`);
 // console.log(h11)
 
 
+const input = document.querySelector('#content');
 const add = document.querySelector('#icon2');
 const remove = document.querySelector('.icon3');
 const form = document.querySelector('.middle');
 const body = document.body;
+const send = document.querySelector('#icon1');
+
+
+
 
 add.addEventListener('click', () => {
     form.classList.toggle('addlist');
@@ -27,3 +32,59 @@ remove.addEventListener('click', () => {
     add.classList.toggle('none');
 
 });
+
+
+
+
+// function getInputFromTextBox() {
+//     var input = document.getElementById("userInput").value;
+//     alert(input);
+// }
+
+
+
+
+
+
+
+if (input === '') {
+    console.log('Put in something')
+} else {
+    console.log(input);
+}
+
+send.addEventListener('click', () => {
+    setTimeout(() => {
+        form.classList.remove('addlist');
+        form.classList.toggle('removelist');
+    }, 500);
+    setTimeout(() => {
+        remove.classList.toggle('block');
+    }, 500);
+    add.classList.toggle('none');
+    input = '';
+    
+})
+
+
+
+
+
+
+/* 
+    const btn = document.getElementById('btn');
+
+btn.addEventListener('click', function handleClick(event) {
+  // 👇️ if you are submitting a form (prevents page reload)
+  event.preventDefault();
+
+  const firstNameInput = document.getElementById('first_name');
+
+  // Send value to server
+  console.log(firstNameInput.value);
+
+  // 👇️ clear input field
+  firstNameInput.value = '';
+});
+
+*/
