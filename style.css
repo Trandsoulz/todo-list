@@ -99,7 +99,7 @@ li{
 }
 
 #icon2{
-    position: absolute;
+    position: fixed;
     bottom: 0px;
     left: 45%;
     color: var(--white);
@@ -110,7 +110,7 @@ li{
 }
 
 .icon3{
-    position: absolute;
+    position: fixed;
     bottom: 0px;
     left: 45%;
     color: var(--white);
