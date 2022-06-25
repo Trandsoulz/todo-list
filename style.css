@@ -168,3 +168,64 @@ input:focus{
     border: 2px solid var(--secondary);
     padding: .6rem;
 }
+
+
+
+.modal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    border: 3px solid var(--primary);
+    border-radius: 8px;
+    width: 60%;
+    margin: 0 auto;
+    padding: .5rem;
+   
+}
+
+.modaldiv{
+    display: none;
+}
+
+.modaldivadd{
+    animation: modal 1.5s forwards;
+    display: block;
+}
+
+@keyframes modal {
+    0%{
+        position: absolute;
+        bottom: -50%;
+    }
+
+    100%{
+        position: absolute;
+        bottom: 40%;
+    }
+
+}
+
+.modaldivleave {
+    animation: modall 1.5s forwards;
+    /* display: none; */
+}
+
+@keyframes modall {
+    0%{
+        position: absolute;
+        bottom: 40%;
+    }
+
+    100%{
+        position: absolute;
+        bottom: 100%;
+    }
+
+}
+
+.modal ion-icon {
+    font-size: 3rem;
+    color: var(--primary);
+    cursor: pointer;
+}

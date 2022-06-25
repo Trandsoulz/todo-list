@@ -24,6 +24,21 @@ const appendedInfo = document.createElement('p');
 const todoArray = [];
 
 
+
+// Bring up modal
+
+setTimeout(() => {
+    console.log(`Hello, I'm working`);
+    document.querySelector('.modaldiv').classList.toggle('modaldivadd');
+    document.querySelector('#close-icon').addEventListener('click', () => {
+      
+        document.querySelector('.modaldiv').classList.add('modaldivleave');
+    })
+
+
+}, 1500);
+
+
 // Bring up input field for text
 function renderTodo(){
     document.getElementById("todoList").innerHTML = "";
